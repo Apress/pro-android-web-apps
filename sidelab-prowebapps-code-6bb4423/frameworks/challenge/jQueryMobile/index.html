@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQueryMobile Moundz</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" media="screen" href="jquery.mobile-1.0a2.min.css" />
+<!-- <link rel="stylesheet" media="screen" href="moundz.css" /> -->
+<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.0a2.min.js"></script>
+<script type="text/javascript" src="moundz.js"></script>
+<!-- <script type="text/javascript" src="phonegap.js"></script> -->
+<script type="text/javascript" src="http://api.geominer.net/jsapi/v1/geominer.js">
+</script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript">
+function initialize() {
+	MOUNDZ.init();
+} // initialize
+</script>
+</head>
+<body onload="initialize()">
+<div id="main" data-role="page">
+	<div data-role="header">
+		<h1>Moundz</h1>
+	</div>
+	<div id="map_canvas" data-role="content"></div>
+	<div data-role="footer" class="ui-bar" data-id="moundz_footer">
+		<div id="marker-nav" data-role="controlgroup" data-type="horizontal">
+			<a href="#" data-role="button" data-icon="arrow-l" class="left">Previous</a>
+			<a href="#marker-detail" data-role="button">** Place Name **</a>
+			<a href="#" data-role="button" data-icon="arrow-r" class="right">Next</a>
+		</div>
+	</div>
+</div>
+<div id="marker-detail" data-role="page">
+	<div data-role="header">
+		<h1>Location Detail</h1>
+	</div>
+    <div data-role='content'>
+    </div>
+</div>
+</body>
+</html>
